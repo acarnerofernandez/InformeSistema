@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class InformeSistema {
     public static void main(String[] args) {
         Runtime r = Runtime.getRuntime();
@@ -52,6 +54,29 @@ public class InformeSistema {
         System.out.println("file.separator: "  + "\""+ separador + "\"");
         System.out.println("Ruta construida con las propiedades: ");
         System.out.println("    "+ user + separador + "psp" + separador + "informe.txt" );
+
+        System.out.println("\nPROPIEDADES QUE EMPIEZAN POR os., user., java.version");
+        System.out.println("==================================================");
+        System.out.println( "java.version = " + System.getProperty("java.version"));
+        System.out.println( "java.version.date = " + System.getProperty("java.version.date"));
+        System.out.println( "os.arch = " + System.getProperty("os.arch"));
+        System.out.println( "os.name = " + System.getProperty("os.name"));
+        System.out.println( "os.version = " + System.getProperty("os.version"));
+        System.out.println( "user.contry = " + System.getProperty("user.country"));
+        System.out.println( "user.dir = " + System.getProperty("user.dir"));
+        System.out.println( "user.home = " + System.getProperty("user.home"));
+        System.out.println( "user.languaje = " + System.getProperty("user.languaje"));
+        System.out.println( "user.name = " + System.getProperty("user.name"));
+
+        System.out.println("\nPROCESO EN ESPERA");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("==================================================");
+        System.out.println("  Buscame desde otra terminal con: ");
+        System.out.println("     ps -ef | grep InformeSistema");
+        System.out.println("  Pulsa INTRO para terminar...");
+        scanner.nextLine();
+        System.out.println("Fin del programa.");
+        scanner.close();
 
 
     }
